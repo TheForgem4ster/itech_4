@@ -11,19 +11,32 @@
         Автор: ст.гр. КИУКИ-19-5 Жук Максим
     </h1>
 Калькулятор<br>
-    
-    <form method="post">
-    <input type="text" name="first" placeholder="0" require> <!-- require - чтобы поле было заполнено -->
+<form method="post">
+    <table>
         
-    <input type="radio" name="group1" id ='add' value="add">+
-    <input type="radio" name="group1" id ='subtract' value="subtract">-
-    <input type="radio" name="group1" id ='divide' value="divide">/
-    <input type="radio" name="group1" id ='multiply' value="multiply">*
-
-    <input type="text" name="second" placeholder="0" require> <!-- require - чтобы поле было заполнено -->
-    <input type="submit" name="submit" value="Вычислить">
+        <tr>
+            <td></td>
+            <td><input type="radio" name="group1" id ='add' value="add">+</td>  
+        </tr>
+        <tr>
+            <td><input type="text" name="first" placeholder="0" require> <!-- require - чтобы поле было заполнено --></td>
+            <td><input type="radio" name="group1" id ='subtract' value="subtract">-</td>
+            <td><input type="text" name="second" placeholder="0" require> <!-- require - чтобы поле было заполнено --></td>
+            <td><input type="submit" name="submit" value="Вычислить"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="group1" id ='multiply' value="multiply">*</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="group1" id ='divide' value="divide">/</td>
+        </tr>
+    </table>
+  
     </form>
     <?php
+    
 
             $first = $_POST['first']; // получение первого числа
             $second = $_POST['second'];// получение второго числа
@@ -43,7 +56,7 @@
                 case "divide":
                     echo "Результат выражения: ".$first / $second;
                     break;
-            }
+            }          
     ?>
 
 </body>
