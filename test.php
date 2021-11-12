@@ -11,9 +11,40 @@
         Автор: ст.гр. КИУКИ-19-5 Жук Максим
     </h1>
 Калькулятор<br>
-    <?php
-    echo "gg"
-    ?>
     
+    <form method="post">
+    <input type="text" name="first" placeholder="0" require> <!-- require - чтобы поле было заполнено -->
+        
+    <input type="radio" name="group1" id ='add' value="add">+
+    <input type="radio" name="group1" id ='subtract' value="subtract">-
+    <input type="radio" name="group1" id ='divide' value="divide">/
+    <input type="radio" name="group1" id ='multiply' value="multiply">*
+
+    <input type="text" name="second" placeholder="0" require> <!-- require - чтобы поле было заполнено -->
+    <input type="submit" name="submit" value="Вычислить">
+    </form>
+    <?php
+
+            $first = $_POST['first']; // получение первого числа
+            $second = $_POST['second'];// получение второго числа
+            $result = $_POST['group1']; // действия записываем
+            
+            switch($result)
+            {
+                case "add":
+                    echo "Результат выражения: ".$first + $second;
+                    break; 
+                case "subtract":
+                    echo "Результат выражения: ".$first - $second;
+                    break;
+                case "multiply":
+                    echo "Результат выражения: ".$first * $second;
+                    break; 
+                case "divide":
+                    echo "Результат выражения: ".$first / $second;
+                    break;
+            }
+    ?>
+
 </body>
 </html>
