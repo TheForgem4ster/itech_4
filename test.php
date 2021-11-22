@@ -36,27 +36,26 @@
   
     </form>
     <?php
-    
+        error_reporting(0);
+        $first = $_POST['first'];// получение первого числа
+        $second = $_POST['second'];// получение второго числа
+        $result = $_POST['group1']; // действия записываем
 
-            $first = $_POST['first']; // получение первого числа
-            $second = $_POST['second'];// получение второго числа
-            $result = $_POST['group1']; // действия записываем
-            
-            switch($result)
-            {
-                case "add":
-                    echo "Результат выражения: ".$first + $second;
-                    break; 
-                case "subtract":
-                    echo "Результат выражения: ".$first - $second;
-                    break;
-                case "multiply":
-                    echo "Результат выражения: ".$first * $second;
-                    break; 
-                case "divide":
-                    echo "Результат выражения: ".$first / $second;
-                    break;
-            }          
+        switch($result)
+        {
+            case "add":
+                echo "Результат выражения: ".$first + $second;
+                break; 
+            case "subtract":
+                echo "Результат выражения: ".$first - $second;
+                break;
+            case "multiply":
+                echo "Результат выражения: ".$first * $second;
+                break; 
+            case "divide":
+                echo "Результат выражения: ".$first / $second;
+                break;
+        }          
     ?>
 
 </body>
